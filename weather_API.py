@@ -2,7 +2,6 @@ import requests
 
 
 def get_openweather_data(data_type, city):
-    API_KEY = "API_KEY"
     """take as a parameter the wanted data and the targeted city as strings. 
     7 options of data : -current_temperature
                            -current_humidity
@@ -14,7 +13,8 @@ def get_openweather_data(data_type, city):
     assert type(data_type) == str, 'the data parameter must be given as a string'
     assert type(city) == str, 'the city parameter must be given as a string'
 
-    
+
+    API_KEY = "API_KEY"
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric&lang=fr" #make the API request
 
     try:
@@ -50,4 +50,5 @@ def get_openweather_data(data_type, city):
         return data[data_type]
 
 print(get_openweather_data("current_temperature", "Eaubonne"))
+
 
