@@ -25,6 +25,7 @@ def get_openweather_data(data_type, city):
 
     except :
         assert False, "There is a problem with the API"
+        return False
 
     if weather_data["cod"] != "404":                                        #stores all retrieived data in a dictionary, before returning the wanted data
         current_temperature = weather_data["main"]["temp"]
@@ -47,4 +48,5 @@ def get_openweather_data(data_type, city):
              "sunset_time": sunset_time,
              "sunrise_time": sunrise_time}
         return data[data_type]
+
 print(get_openweather_data("current_temperature", "Eaubonne"))
