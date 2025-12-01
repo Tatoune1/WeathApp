@@ -19,3 +19,6 @@ Because I am not the smartest man alive, I may accidentally left my key somewher
 Yeah, I know, it’s not pretty. I originally tested OpenWeatherMap in another project (which might end up on GitHub as `ARVAC`), and since `Ctrl+C` and `Ctrl+V` were already more effort than I wanted to put in, I just dragged the whole file into this project.
 
 I’ll eventually move it somewhere else or clean things up. If you’re reading this and thinking “why is he talking about a file that doesn’t even exist?” please let me know so I can update (or delete) this section of the README.
+
+# How to make it work
+In order to make the program run without installing all required library, you can use the env folder, by running `myenv\Scripts\activate` in the console. If it dont work, use pip to install PySide6 and requests
